@@ -1,0 +1,6 @@
+SELECT 
+   *, 
+   (Asst1 + Asst2 + Exam) AS TotalMark, 
+   (IF(TotalMark > 84.5, 'A', IF (TotalMark > 64.5, 'B', 
+       IF(TotalMark > 49.5, 'C', IF (TotalMark > 29.5, 'D', 'E'))))) AS Grade 
+FROM Results
